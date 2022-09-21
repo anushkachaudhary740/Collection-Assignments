@@ -25,7 +25,7 @@ public class StudentParser {
         while ((stf = br.readLine()) != null) {
             Student student=studentMap.map(stf);
             list.add(student);
-            System.out.println(stf);
+            //System.out.println(stf);
         }
         return list;
     }
