@@ -22,7 +22,7 @@ public class Main {
 
 
         String filePath="/home/anushkac/Downloads/Java Traning/src/corejava/collection/assignment02/Assignment4/inputfile/fileinput";
-        List<Student> studentList=inputParser.parseCSVFile(filePath);
+        List<Student> studentList=inputParser.parseFile(filePath);
         GetAvgMark om = new GetAvgMark(studentList);
 
         Integer fileminimumIdInList = om.filefindMinimumInList();

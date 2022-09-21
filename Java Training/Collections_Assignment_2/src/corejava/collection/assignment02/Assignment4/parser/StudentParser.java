@@ -15,17 +15,21 @@ public class StudentParser {
         return list;
     }
 
-    public List<Student> parseCSVFile(String filePath) throws IOException {
+    public List<Student> parseFile(String filePath)  {
         List<Student> list = new ArrayList<Student>();
         // TODO: write code to read file line by line and parse the line.
+        try{
         File file = new File(filePath);
         BufferedReader br = new BufferedReader(new FileReader(file));
         String stf;
 
         while ((stf = br.readLine()) != null) {
-            Student student=studentMap.map(stf);
+            Student student = studentMap.map(stf);
             list.add(student);
             //System.out.println(stf);
+        }
+        }catch(IOException e){
+            System.out.println("File not found");
         }
         return list;
     }
